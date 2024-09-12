@@ -13,6 +13,6 @@ spec:
   resources:
     requests:
       storage: 20Gi
-  storageClassName: ocs-external-storagecluster-ceph-rbd
+  storageClassName: ocs-storagecluster-ceph-rbd
   volumeMode: Block
 
