@@ -5,5 +5,5 @@ metadata:
   name: vm-source
 spec:
   source:
-      http:
-         url: "s3://bjeon-vm/mtv-rhel9-vm-1.img" # S3 or GCS
+      registry:
+         url: "docker://registry.redhat.io/rhel8/rhel-guest-image:8.10.0" # S3 or GCS
