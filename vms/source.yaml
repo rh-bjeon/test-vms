@@ -7,3 +7,4 @@ spec:
   source:
       registry:
          url: "docker://registry.redhat.io/rhel8/rhel-guest-image:8.10.0-908" # S3 or GCS
+         secretRef: redhat-regi
