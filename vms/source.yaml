@@ -6,5 +6,5 @@ metadata:
 spec:
   source:
       registry:
-         url: "docker://registry.redhat.io/rhel8/rhel-guest-image:8.10.0-908" # S3 or GCS
-         secretRef: redhat-regi
+         url: "docker://ocp-registry-quay-quay.apps.openshift01.sandbox322.opentlc.com/rhel9/rhel-guest-image:9.2-817" # S3 or GCS
+         secretRef: pull-secret
