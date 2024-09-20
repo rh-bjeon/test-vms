@@ -6,5 +6,4 @@ metadata:
 spec:
   source:
       registry:
-         url: "docker://registry.redhat.io/rhel9/rhel-guest-image:9.4-1175"
-         secretRef: pull-secret
+         url: "docker://quay.io/bjeon1/rhel8:latest"
