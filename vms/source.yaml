@@ -7,3 +7,4 @@ spec:
   source:
       registry:
          url: "docker://quay.io/bjeon1/rhel8:latest"
+         pullMethod: node
