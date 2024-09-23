@@ -65,6 +65,7 @@ spec:
               - unzip
               - apr
               runcmd:
+                - dnf install git java-11-openjdk-devel unzip apr -y
                 - sudo -u cloud-user bash -c 'git clone https://github.com/jangminjun/egovframeworksample'
                 - sudo -u cloud-user bash -c 'cd /home/cloud-user/egovframeworksample & unzip jws-5.8.0-application-server.zip'
                 - sudo -u cloud-user bash -c 'cd /home/cloud-user/egovframeworksample & unzip jws-5.8.0-application-server-RHEL8-x86_64.zip'
