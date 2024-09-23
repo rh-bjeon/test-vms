@@ -40,7 +40,7 @@ spec:
           bootloader:
             efi: {}
         machine:
-          type: q35
+          type: pc-q35-rhel9.4.0
         resources:
           requests:
             memory: 4Gi
@@ -59,4 +59,15 @@ spec:
               user: cloud-user
               password: redhat
               chpasswd: { expire: False }
+              packages:
+              - git
+              - java-11-openjdk-devel
+              - unzip
+              - apr
+              runcmd:
+                - sudo -u cloud-user bash -c 'git clone https://github.com/jangminjun/egovframeworksample'
+                - sudo -u cloud-user bash -c 'cd /home/cloud-user/egovframeworksample & unzip jws-5.8.0-application-server.zip'
+                - sudo -u cloud-user bash -c 'cd /home/cloud-user/egovframeworksample & unzip jws-5.8.0-application-server-RHEL8-x86_64.zip'
+                - sudo -u cloud-user bash -c 'cp /home/cloud-user/egovframeworksample/EnisRest -R /home/cloud-user/egovframeworksample/jws-5.8/tomcat'
+                - sudo -u cloud-user bash -c '/home/cloud-user/egovframeworksample/jws-5.8/tomcat/bin/startup.sh'
           name: cloudinitdisk
