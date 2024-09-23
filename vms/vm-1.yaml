@@ -73,5 +73,5 @@ spec:
                 - sudo -u cloud-user bash -c 'cd /home/cloud-user/ & git clone https://github.com/jangminjun/egovframeworksample'
                 - sudo -u cloud-user bash -c 'cd /home/cloud-user/egovframeworksample & unzip jws-5.8.0-application-server.zip'
                 - sudo -u cloud-user bash -c 'cd /home/cloud-user/egovframeworksample & unzip jws-5.8.0-application-server-RHEL8-x86_64.zip'
-                - sudo -u cloud-user bash -c 'cp /home/cloud-user/egovframeworksample/EnisRest -R /home/cloud-user/egovframeworksample/jws-5.8/tomcat'
+                - sudo -u cloud-user bash -c 'cp /home/cloud-user/egovframeworksample/EnisRest -R /home/cloud-user/egovframeworksample/jws-5.8/tomcat/webapps'
           name: cloudinitdisk
