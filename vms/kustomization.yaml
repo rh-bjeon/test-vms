@@ -6,6 +6,6 @@ resources:
   - svc.yaml
   - route.yaml
 commonLabels:
-  appname: kubevirt
+  appname: egovframeworksample
 generatorOptions:
   disableNameSuffixHash: true
