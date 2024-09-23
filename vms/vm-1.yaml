@@ -13,7 +13,6 @@ spec:
         vm.kubevirt.io/workload: server
       labels:
         kubevirt.io/size: small
-        app-svc: enisrest
     spec:
       domain:
         cpu:
