@@ -3,7 +3,9 @@ resources:
   - source.yaml
   - pvc-1.yaml
   - vm-1.yaml
+  - svc.yaml
+  - route.yaml
 commonLabels:
-  appname: kubevirt
+  appname: egovframeworksample
 generatorOptions:
   disableNameSuffixHash: true
