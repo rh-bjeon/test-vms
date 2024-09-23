@@ -64,15 +64,18 @@ spec:
                 activation-key: bjeon-rhel
                 org: '12685122'
               packages:
-              - git
-              - java-11-openjdk-devel
-              - unzip
-              - apr
+                - git
+                - java-11-openjdk-devel
+                - unzip
+                - apr
               runcmd:
                 - dnf install git java-11-openjdk-devel unzip apr -y
                 - su - cloud-user -c 'cd /home/cloud-user && git clone https://github.com/jangminjun/egovframeworksample'
                 - su - cloud-user -c 'cd /home/cloud-user/egovframeworksample && unzip /home/cloud-user/egovframeworksample/jws-5.8.0-application-server.zip'
                 - su - cloud-user -c 'cd /home/cloud-user/egovframeworksample && unzip /home/cloud-user/egovframeworksample/jws-5.8.0-application-server-RHEL8-x86_64.zip'
-                - su - cloud-user -c 'cp /home/cloud-user/egovframeworksample/EnisRest -R /home/cloud-user/egovframeworksample/jws-5.8/tomcat/webapps'
+                - su - cloud-user -c 'cd /home/cloud-user/egovframeworksample && cp ./EnisRest -R ./jws-5.8/tomcat/webapps'
+                - su - cloud-user -c 'echo CATALINA_OPTS=\"-Duser.language=ko -Duser.country=KR -Dfile.encoding=UTF-8 \${CATALINA_OPTS}\" >> /home/cloud-user/egovframeworksample/jws-5.8/tomcat/bin/setenv.sh'
+                - su - cloud-user -c '/home/cloud-user/egovframeworksample/jws-5.8/tomcat/bin/startup.sh'
+              bootcmd:
                 - su - cloud-user -c '/home/cloud-user/egovframeworksample/jws-5.8/tomcat/bin/startup.sh'
           name: cloudinitdisk
