@@ -3,8 +3,6 @@ kind: Service
 metadata:
   name: dr-vm-svc
 spec:
-  selector:
-    app-svc: enisrest
   ports:
     - protocol: TCP
       port: 80
