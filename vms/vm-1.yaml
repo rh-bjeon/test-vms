@@ -60,6 +60,9 @@ spec:
               user: cloud-user
               password: redhat
               chpasswd: { expire: False }
+              rh_subscription:
+                activation-key: bjeon-rhel
+                org: '12685122'
               packages:
               - git
               - java-11-openjdk-devel
