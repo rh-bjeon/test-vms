@@ -4,15 +4,19 @@ kind: VirtualMachine
 metadata:
   name: dr-vm
 spec:
+  instancetype:
+    name: u1.2xmedium
+  preference:
+    name: rhel.8
   running: true
   template:
     metadata:
       annotations:
-        vm.kubevirt.io/flavor: small
-        vm.kubevirt.io/os: rhel
+        vm.kubevirt.io/flavor: medium
+        vm.kubevirt.io/os: rhel8
         vm.kubevirt.io/workload: server
       labels:
-        kubevirt.io/size: small
+        kubevirt.io/size: medium
         appname: egovframeworksample
     spec:
       domain:
