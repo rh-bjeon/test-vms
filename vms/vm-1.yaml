@@ -13,6 +13,7 @@ spec:
         vm.kubevirt.io/workload: server
       labels:
         kubevirt.io/size: small
+        appname: egovframeworksample
     spec:
       domain:
         cpu:
