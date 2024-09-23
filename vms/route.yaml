@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: test
+spec:
+  to:
+    kind: Service
+    name: dr-vm-svc
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: ''
+    destinationCACertificate: ''
+  path: /EnisRest
+  port:
+    targetPort: 8080
